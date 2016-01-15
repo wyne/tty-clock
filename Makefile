@@ -15,9 +15,9 @@ ifeq ($(shell sh -c 'which ncurses5-config&>/dev/null; $?'), 0)
 else ifeq ($(shell sh -c 'which ncursesw5-config&>/dev/null; $?'), 0)
 	CFLAGS ?= -Wall -g -I $$(ncursesw5-config --includedir)
 	LDFLAGS ?= -L $$(ncursesw5-config --libdir) $$(ncursesw5-config --libs)
-else ifeq ($(shell sh -c 'brew ls --versions ncurses'), ncurses 6.0)
-	CFLAGS ?= -Wall -g -D_DARWIN_C_SOURCE -I/usr/local/Cellar/ncurses/6.0/include
-	LDFLAGS ?= -L/usr/local/Cellar/ncurses/6.0/lib -lncursesw
+else ifeq ($(shell sh -c 'brew ls --versions ncurses'), ncurses 6.0_1)
+	CFLAGS ?= -Wall -g -D_DARWIN_C_SOURCE -I/usr/local/Cellar/ncurses/6.0_1/include
+	LDFLAGS ?= -L/usr/local/Cellar/ncurses/6.0_1/lib -lncursesw
 else
 $(error Your build environment is not supported)
 endif

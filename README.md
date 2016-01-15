@@ -1,3 +1,10 @@
+# Installation
+
+* brew install homebrew/dupes/ncurses
+* make install
+
+# Usage
+
 usage : tty-clock [-iuvsScbtrahDBxn] [-C [0-7]] [-f format] [-d delay] [-a nsdelay] [-T tty] 
     -s            Show seconds                                   
     -S            Screensaver mode                               
